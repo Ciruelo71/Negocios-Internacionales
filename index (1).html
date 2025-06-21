@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explora Negocios Internacionales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      animation: fadeSlideDown 1s ease-out forwards;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      transition: all 0.3s ease-in-out;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #ffcc00;
+      transition: width 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background-color: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    section:nth-child(even) {
+      animation-delay: 0.3s;
+    }
+    h2 {
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      background-color: #004080;
+      color: white;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explora Negocios Internacionales</h1>
+    <p>Conoce todo sobre esta fascinante carrera</p>
+  </header>
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#definicion">¿Qué es?</a>
+      <a href="#importancia">Importancia</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#campo">Campo Laboral</a>
+      <a href="#conclusion">Conclusión</a>
+    </div>
+  </nav>
+  <main>
+    <section id="inicio">
+      <h2>Inicio</h2>
+      <p>Bienvenido a "Explora Negocios Internacionales". Aquí encontrarás información clara y concisa sobre una de las carreras con mayor proyección global. Descubre si esta profesión es para ti.</p>
+    </section>
+    <section id="definicion">
+      <h2>¿Qué son los Negocios Internacionales?</h2>
+      <p>Los Negocios Internacionales son una disciplina enfocada en el estudio y gestión de las actividades comerciales entre países. Abarcan temas como comercio exterior, tratados internacionales, finanzas globales, logística, mercadotecnia internacional y gestión intercultural. Su objetivo es formar profesionales con visión global, capaces de enfrentar los desafíos del mercado internacional y tomar decisiones estratégicas que beneficien a sus organizaciones en un contexto competitivo y multicultural.</p>
+    </section>
+    <section id="importancia">
+      <h2>Importancia de los Negocios Internacionales</h2>
+      <p>En un mundo globalizado, las empresas deben interactuar con clientes, proveedores, gobiernos y competidores de todo el mundo. Los Negocios Internacionales permiten que las organizaciones amplíen sus mercados, optimicen costos, diversifiquen riesgos y aprovechen oportunidades de inversión extranjera. Además, promueven el entendimiento cultural y la cooperación entre naciones, impulsando el desarrollo económico sostenible.</p>
+    </section>
+    <section id="perfil">
+      <h2>Perfil del Egresado</h2>
+      <ul>
+        <li>Diseño de estrategias de comercio exterior.</li>
+        <li>Capacidad de negociación internacional.</li>
+        <li>Dominio de temas legales y económicos globales.</li>
+        <li>Comunicación en varios idiomas.</li>
+        <li>Habilidad para el análisis de mercados internacionales.</li>
+      </ul>
+    </section>
+    <section id="habilidades">
+      <h2>Habilidades Clave del Profesional</h2>
+      <ul>
+        <li>Pensamiento estratégico y análisis crítico de entornos globales.</li>
+        <li>Dominio del inglés y otros idiomas relevantes para el comercio.</li>
+        <li>Capacidad para negociar en contextos culturales diversos.</li>
+        <li>Manejo de herramientas tecnológicas y plataformas de comercio internacional.</li>
+        <li>Ética profesional y responsabilidad social en contextos globalizados.</li>
+      </ul>
+    </section>
+    <section id="campo">
+      <h2>Campo Laboral</h2>
+      <p>Un egresado en Negocios Internacionales cuenta con un amplio abanico de oportunidades profesionales en empresas públicas y privadas, tanto nacionales como extranjeras. Puede desempeñarse en áreas como:</p>
+      <ul>
+        <li>Empresas multinacionales con operaciones en varios países.</li>
+        <li>Consultorías especializadas en comercio exterior e inversión extranjera.</li>
+        <li>Departamentos de logística, exportación e importación.</li>
+        <li>Instituciones gubernamentales como Secretaría de Economía, aduanas, ProMéxico o embajadas.</li>
+        <li>Organismos internacionales como la ONU, la OMC, el BID o la OCDE.</li>
+        <li>Startups y empresas tecnológicas que busquen expandirse internacionalmente.</li>
+      </ul>
+    </section>
+    <section id="conclusion">
+      <h2>Conclusión</h2>
+      <p>Negocios Internacionales es una carrera apasionante y en constante evolución, ideal para jóvenes con visión global, interés por los idiomas, la economía y la cultura. Permite desarrollar una carrera profesional con impacto internacional y brinda herramientas para innovar, negociar y liderar en entornos multiculturales. En un mundo cada vez más conectado, los profesionales en esta área son esenciales para impulsar el crecimiento de las empresas y fomentar relaciones económicas sólidas entre países.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Explora Negocios Internacionales. Proyecto académico.</p>
+  </footer>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
